@@ -1,0 +1,86 @@
+﻿@model Kutse_App.Models.Guest
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<div>
+    <p>Tänan sind, @Model.Name</p>
+</div>
+<div>
+    @if(Model.WillAttend == true)
+    {
+        @:Ootame sind kallis sõber!
+        <p>
+            <img src="~/Images/default.jpg" />
+        </p>
+    }
+    else
+    {
+        @:Väga kurb uudis. Näeme hiljem!
+        <p>
+            <img src="~/Images/default.jpg" />
+        </p>
+    }
+    @ViewBag.Message @*ViewBag.Message -Отчет об отправке письма с приглашением *@
+</div>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        text-shadow: 0 0 10px white;
+        text-align: center;
+        display: inline-block;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 76px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+            li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+    body {
+        text-align: center; /* Centrirovanie */
+        background-color: black;
+        color: white; /* cvet */
+    }
+
+    h1 {
+        text-shadow: 0 0 10px white; /* glow whitee */
+        font-size: 4em;
+    }
+
+    h2 {
+        text-shadow: 0 0 10px white; /* glow whitee */
+        font-size: 2.5em;
+    }
+
+
+    footer {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        padding: 10px;
+    }
+
+    area {
+        color: red;
+    }
+</style>

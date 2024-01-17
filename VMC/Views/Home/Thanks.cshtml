@@ -1,0 +1,24 @@
+﻿@model VMC.Models.guest
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<h2>Thanks</h2>
+<div>
+    @if (Model.WillAttend == true)
+            {
+                @:Ootame sind kallis sõber!
+                <p>
+                    <img scr="~/Images/kutse.jpg" />
+                </p>
+            }
+    else
+            {
+                @:Väga kurb uudis. Näeme hiljem!
+                <p>
+                    <img src="~/Images/kutse.jpg" />
+                </p>
+            }
+    @ViewBag.Message @*Viewbag.Message - отчет об отправыке письма с приглащением*@
+</div>
